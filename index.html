@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragged Div</title>
+    <!-- BoxIcon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <svg id="svg" class="hidden">
+        <line x1="0" y1="0" x2="0" y2="0" stroke="blue" stroke-width="2"></line>
+    </svg>
+    <!-- Örnek wrapper divleri -->
+    <div class="wrapper" id="div1">
+        <header data-no="div1">Draggable Div 1</header>
+        <div class="content">
+            <ul>
+                <li data-no="div1" onmousedown="startDragging(event)" onmouseup="endDragging(event)">
+                    <div class="icon"><i class="bx bx-move"></i></div>
+                    <div class="item">
+                        <div class="item-name">Deneme</div>
+                        <div class="item-type">
+                            <select>
+                                <option value="">integar</option>
+                                <option value="">Varchar</option>
+                                <option value="">Double</option>
+                                <option value="">Float</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon"><i class="bx bx-move"></i></div>
+                    <div class="item">
+                        <div class="item-name">Deneme</div>
+                        <div class="item-type">
+                            <select>
+                                <option value="">integar</option>
+                                <option value="">Varchar</option>
+                                <option value="">Double</option>
+                                <option value="">Float</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrapper" id="div2">
+        <header data-no="div2">Draggable Div 2</header>
+        <div class="content">
+            <ul>
+                <li id="item2" data-no="div2" onmousedown="startDragging(event)" onmouseup="endDragging(event)">
+                    <div class="icon"><i class="bx bx-move"></i></div>
+                    <div class="item">
+                        <div class="item-name">Deneme</div>
+                        <div class="item-type">
+                            <select class="select">
+                                <option value="">integar</option>
+                                <option value="">Varchar</option>
+                                <option value="">Double</option>
+                                <option value="">Float</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon"><i class="bx bx-move"></i></div>
+                    <div class="item">
+                        <div class="item-name">Deneme</div>
+                        <div class="item-type">
+                            <select>
+                                <option value="">integar</option>
+                                <option value="">Varchar</option>
+                                <option value="">Double</option>
+                                <option value="">Float</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Diğer wrapper divleri buraya ekleyebilirsiniz -->
+   
+    <script src="app.js"></script>
+</body>
+</html>

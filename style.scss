@@ -1,0 +1,96 @@
+body{
+    overflow: hidden;
+    user-select: none;
+}
+svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    overflow: hidden;
+    line{
+        z-index: 1000;
+    }
+}
+
+.hidden {
+    display: none;
+    overflow: hidden;
+}
+
+.wrapper {
+    top: 50%;
+    left: 50%;
+    width: 165px;
+    background-color: antiquewhite;
+    position: absolute;
+    text-align: center;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(1.4);
+
+    header {
+        color: black;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 4px 0px;
+        border-bottom: 1px solid #bfbfbf;
+    }
+
+    header.active {
+        cursor: move;
+        user-select: none;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        height: 200px;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            width: 100%;
+
+            li {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                padding-left: 5px;
+                border: 1px solid #bfbfbf;
+                border-radius: 10px;
+                margin-bottom: 8px;
+                .icon {
+                    padding-right: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .item{
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    padding-right: 15px;
+
+                    .item-name{
+                        margin-right: 15px;
+                    }
+                    .item-type{
+                        select{
+                            font-size: 11px;
+                            background: none;
+                            border: 0;
+                            outline: 0;
+                            option{
+                                border: 0;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    background-color: lightcyan;
+                }
+            }
+        }
+    }
+}
